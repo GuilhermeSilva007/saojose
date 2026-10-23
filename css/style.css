@@ -38,6 +38,9 @@ h1 {
 .logo {
   display: flex;
   align-items: center;
+  width: 60px;
+  height: auto;
+  gap: 4px;
 }
 
 header ul {
@@ -46,32 +49,36 @@ header ul {
 }
 
 .banner {
-  padding: 3vw 4vw 10vw;
+  padding: 3vw 4vw 0;
+}
+
+.banner img {
+  display: none;
 }
 
 .banner h2 {
-  font-size: 1.2rem;
-  margin-bottom: 3vw;
+  font-size: 1.6rem;
+  margin-bottom: 2vw;
 }
 
 .banner p {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   letter-spacing: 0.3px;
-  margin-bottom: 3vw;
+  margin-bottom: 5vw;
 }
 
 #mini-titulo {
-  font-size: 0.3rem;
+  font-size: 0.5rem;
   letter-spacing: 2px;
   color: #5e101a;
-  margin-bottom: 0.8vw;
+  margin-bottom: 0.3vw;
   margin-left: 0.05rem;
   font-weight: 600;
 }
 
 .banner a {
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   background-color: #5e101a;
   color: #fbf6ee;
   padding: 2vw 3vw;
@@ -79,27 +86,31 @@ header ul {
   font-weight: 600;
 }
 
-.capituloi,
+.capituloi {
+  padding: 4vw 4vw;
+  background-color: #c29a9a1f;
+}
+
 .capituloiii {
   padding: 4vw 4vw;
-  background-color: #e9e9e9;
+  background-color: #c29a9a1f;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 2vw;
 }
 
 .capituloi p,
 .capituloii p {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   line-height: 1.3;
   letter-spacing: 0.3px;
   margin-bottom: 3vw;
 }
 
 .capituloiii p {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   line-height: 1.3;
   margin: 2vw 0;
 }
@@ -174,20 +185,28 @@ q::after {
   letter-spacing: 0.3px;
 }
 
+.oracao img {
+  display: block;
+  margin: 0 auto 6vw;
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+}
+
 .oracao {
-  padding: 10vw 4vw 5vw;
-  margin: 2vw;
+  padding: 6vw 4vw 5vw;
+  margin: 2vw 2vw 4vw;
   background-color: #fff;
   border-radius: 8px;
 }
 
 .oracao h3 {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-bottom: 2vw;
 }
 
 .oracao p {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   margin-bottom: 3vw;
 }
 
@@ -196,4 +215,90 @@ q::after {
   font-weight: bold;
   font-size: 0.8rem;
   letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  padding: 4vw 2vw;
+  border-top: 1px solid #5e101a;
+  color: #5e101a;
+}
+
+footer h3 {
+  font-weight: 600;
+  font-size: 0.5rem;
+  letter-spacing: 1.2px;
+}
+
+footer p {
+  margin-bottom: 4vw;
+  font-size: 0.5rem;
+}
+
+footer img {
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (min-width: 600px) {
+  header ul {
+    gap: 35px;
+  }
+
+  .banner img {
+    display: flex;
+    width: 1200px;
+    height: auto;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 4vw 10vw 0;
+  }
+
+  .banner h2 {
+    font-size: 1rem;
+    margin-bottom: 1vw;
+  }
+
+  #mini-titulo {
+    font-size: 0.3rem;
+  }
+
+  .banner p {
+    margin-bottom: 3vw;
+    font-size: 0.6rem;
+  }
+
+  .banner a {
+    font-size: 0.3rem;
+  }
+
+  .capituloi,
+  .capituloii,
+  .capituloiii {
+    padding: 4vw 10vw;
+  }
+
+  .capituloi h3,
+  .capituloii h3,
+  .capituloiii h3 {
+    font-size: 1.1rem;
+  }
+
+  .capituloi p,
+  .capituloii p,
+  .capituloiii p {
+    font-size: 0.5rem;
+  }
+
+  q {
+    font-size: 0.7rem;
+  }
+  .legado {
+    margin: 5vw 15vw;
+  }
 }

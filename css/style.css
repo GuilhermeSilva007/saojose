@@ -1,32 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*
 Fontes Disponíveis:
-// Sugiro usar esta 
-font-family: "Urbanist", sans-serif; 
+// Sugiro usar esta
+font-family: "Urbanist", sans-serif;
 font-family: "Fredoka", sans-serif;
 font-family: "Epilogue", sans-serif;
 font-family: "Nunito", sans-serif;
 font-family: "Oswald", sans-serif;
 */
+
 /* ==========================*/
 
 /* ==== FORMATAÇÃO GERAL === */
+
 html {
   font-size: clamp(1rem, 2vw + 0.8rem, 3rem);
   user-select: none;
   scroll-behavior: smooth;
   scroll-padding-top: 20px;
 }
+
 body {
   margin: 0;
   background-color: #fbf6ee;
   color: #352c29;
   font-family: "Urbanist", sans-serif;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -34,10 +40,12 @@ a {
     background-color 0.2s ease,
     color 0.2s ease;
 }
+
 a:focus-visible {
   outline: 2px solid #d6a54d;
   outline-offset: 4px;
 }
+
 header {
   padding: 2vw 6vw;
   display: flex;
@@ -49,6 +57,7 @@ header {
   border-bottom: 1px solid #e4d6c7;
   background-color: #fbf6ee;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -57,19 +66,23 @@ header {
   gap: 8px;
   flex-shrink: 0;
 }
+
 .logo a {
   display: flex;
   align-items: center;
 }
+
 .logo img {
   display: block;
   width: 20px;
   height: auto;
 }
+
 h1 {
   color: #5e101a;
   margin: 0;
 }
+
 header ul {
   display: flex;
   align-items: center;
@@ -80,6 +93,7 @@ header ul {
   padding: 0;
   margin: 0;
 }
+
 header nav a {
   display: inline-block;
   padding: 8px 0;
@@ -88,12 +102,15 @@ header nav a {
 }
 
 /* ==== BANNER ==== */
+
 .banner {
   padding: 9vw 7vw;
 }
+
 .texto-banner {
   max-width: 650px;
 }
+
 .banner img {
   display: none;
 }
@@ -101,18 +118,21 @@ header nav a {
 #texto-ia {
   display: none;
 }
+
 .banner h2 {
   font-size: 1.6rem;
   line-height: 1.12;
   color: #5e101a;
   margin: 0 0 2vw;
 }
+
 .banner p {
   font-size: 0.7rem;
   line-height: 1.6;
   letter-spacing: 0.3px;
   margin-bottom: 5vw;
 }
+
 #mini-titulo {
   font-size: 0.5rem;
   letter-spacing: 2px;
@@ -121,6 +141,7 @@ header nav a {
   margin-left: 0.05rem;
   font-weight: 600;
 }
+
 .banner a {
   display: inline-block;
   font-size: 0.7rem;
@@ -132,19 +153,36 @@ header nav a {
   letter-spacing: 0.5px;
   box-shadow: 0 4px 10px #5e101a1c;
 }
+
 .banner a:hover {
   background-color: #7a202b;
   color: #fff;
   transition: 0.4s ease;
 }
 
+summary {
+  color: #7b5a1b;
+  list-style: none;
+  font-size: 0.5rem;
+}
+
 /* ==== CAPÍTULO I ==== */
+
 .capituloi {
   padding: 7vw 7vw;
   background-color: #c29a9a1f;
   border-top: 1px solid #eadbd5;
   border-bottom: 1px solid #eadbd5;
 }
+
+.capituloi p:last-child,
+.capituloii p:last-child,
+.capituloiii p:last-child,
+.capitulov p:last-child {
+  font-size: 0.6rem;
+  margin-top: 2vw;
+}
+
 h3 {
   font-size: 1.2rem;
   color: #5e101a;
@@ -152,35 +190,41 @@ h3 {
   margin-top: 0;
   margin-bottom: 2vw;
 }
+
 .capituloi p,
-.capituloii p {
+.capituloii p,
+.capituloiv p,
+.capitulov p {
   font-size: 0.7rem;
   line-height: 1.6;
   letter-spacing: 0.3px;
   margin-bottom: 3vw;
 }
-.capituloi p:last-child,
-.capituloii p:last-child {
-  margin-bottom: 0;
-}
 
 /* ==== CAPÍTULO II ==== */
-.capituloii {
+
+.capituloii,
+.capituloiv {
   padding: 7vw 7vw;
   background-color: #fbf6ee;
 }
 
 /* ==== CAPÍTULO III ==== */
-.capituloiii {
+
+.capituloiii,
+.capitulov {
   padding: 7vw 7vw;
   background-color: #c29a9a1f;
   border-top: 1px solid #eadbd5;
 }
-.capituloiii p {
+
+.capituloiii p,
+.capitulov p {
   font-size: 0.7rem;
   line-height: 1.6;
   margin: 2vw 0;
 }
+
 q {
   display: block;
   font-family: "Times New Roman", Times, serif;
@@ -191,6 +235,7 @@ q {
   font-style: italic;
   line-height: 1.6;
 }
+
 q::before {
   content: open-quote;
   font-size: 1rem;
@@ -198,6 +243,7 @@ q::before {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #5e101a;
 }
+
 q::after {
   content: close-quote;
   font-size: 1rem;
@@ -207,6 +253,7 @@ q::after {
 }
 
 /* ==== LINHA DO TEMPO ==== */
+
 .legado {
   border-radius: 8px;
   padding: 8vw 5vw;
@@ -215,14 +262,17 @@ q::after {
   margin: 10vw 3vw;
   box-shadow: 0 8px 24px #5e101a16;
 }
+
 .legado h3 {
   font-size: 0.9rem;
   margin-bottom: 4vw;
   color: #fff8ed;
 }
+
 .legado #mini-titulo {
   color: #d6a54d;
 }
+
 .legado h4 {
   font-size: 0.7rem;
   color: #d6a54d;
@@ -231,17 +281,20 @@ q::after {
   margin-top: 0;
   margin-bottom: 1vw;
 }
+
 .container-sant {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .legado ul li p {
   font-size: 0.5rem;
   line-height: 1.6;
   letter-spacing: 0.3px;
   margin: 0;
 }
+
 .legado li {
   padding: 4vw;
   border: 1px solid #ffffff12;
@@ -264,25 +317,30 @@ q::after {
   flex: 1;
   min-width: 0;
 }
+
 .imgl {
   width: 20px;
   height: auto;
   flex-shrink: 0;
   text-align: center;
 }
+
 .imgl img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .legado > p:last-child {
-  margin: 4vw 0 0 2vw;
+  text-align: left;
+  margin: 4vw 2vw 0 2vw;
   font-size: 0.5rem;
   line-height: 1.6;
   letter-spacing: 0.3px;
 }
 
 /* ==== ORAÇÃO ==== */
+
 .oracao {
   padding: 6vw 5vw;
   margin: 5vw 3vw 7vw;
@@ -291,22 +349,30 @@ q::after {
   border-radius: 8px;
   box-shadow: 0 5px 20px #352c2908;
 }
+
 .oracao img {
   display: block;
-  margin: 0 auto 6vw;
-  width: 70%;
+  margin: 2vw auto 6vw;
+  width: 50%;
   height: auto;
   border-radius: 5px;
+  outline-offset: 5px;
+  outline: 1px solid #d6a54d;
 }
+
 .oracao h3 {
   font-size: 1.2rem;
   margin-bottom: 2vw;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
 }
+
 .oracao p {
   font-size: 0.7rem;
   line-height: 1.6;
-  margin-bottom: 3vw;
+  margin-bottom: 4vw;
 }
+
 #frase-sjs {
   color: #5e101a;
   font-weight: bold;
@@ -318,6 +384,7 @@ q::after {
 }
 
 /* ==== RODAPÉ ==== */
+
 footer {
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -326,16 +393,19 @@ footer {
   color: #5e101a;
   background-color: #fbf6fb;
 }
+
 footer h3 {
   font-weight: 600;
   font-size: 0.5rem;
   letter-spacing: 1.2px;
   color: #5e101a;
 }
+
 footer p {
   margin-bottom: 4vw;
   font-size: 0.5rem;
 }
+
 footer img {
   width: 50px;
   height: auto;
@@ -349,17 +419,36 @@ footer img {
   display: none;
 }
 
+/* ==== RESPONSIVIDADE ==== */
+
 @media screen and (min-width: 600px) {
+  details > summary {
+    display: none;
+  }
+
+  details > p {
+    display: block;
+  }
+
   header {
     padding: 1.5vw 12vw;
   }
+
   header ul {
     gap: 35px;
   }
+
+  header a:hover {
+    transition: 0.5s ease;
+    color: #d89e32;
+    transform: translateY(-1px);
+  }
+
   .logo img {
     width: 45px;
     margin-right: 10px;
   }
+
   .banner {
     display: flex;
     align-items: center;
@@ -367,13 +456,16 @@ footer img {
     gap: 6vw;
     padding: 4vw 12vw;
   }
+
   .texto-banner {
     flex: 1;
     min-width: 0;
   }
+
   .img-banner {
     min-width: 0;
   }
+
   .banner img {
     display: block;
     width: 500px;
@@ -403,17 +495,21 @@ footer img {
     padding: 0.2vw 1vw;
     font-weight: 600;
   }
+
   .banner h2 {
     font-size: 1.5rem;
     margin-bottom: 1vw;
   }
+
   #mini-titulo {
     font-size: 0.3rem;
   }
+
   .banner p {
     margin-bottom: 3vw;
     font-size: 0.6rem;
   }
+
   .banner a {
     font-size: 0.5rem;
     padding: 1vw 1.5vw;
@@ -421,25 +517,36 @@ footer img {
     background-color: #fbf6ee;
     color: #5e101a;
   }
+
   .capituloi,
   .capituloii,
-  .capituloiii {
+  .capituloiii,
+  .capituloiv,
+  .capitulov {
     padding: 5vw 23vw;
   }
+
   .capituloi h3,
   .capituloii h3,
-  .capituloiii h3 {
+  .capituloiii h3,
+  .capituloiv h3,
+  .capitulov {
     font-size: 1.1rem;
   }
+
   .capituloi p,
   .capituloii p,
-  .capituloiii p {
-    font-size: 0.5rem;
-  }
-  q {
+  .capituloiii p,
+  .capituloiv p,
+  .capitulov {
     font-size: 0.7rem;
-    margin-top: 4vw;
-    text-align: center;
+  }
+
+  .capituloi p:last-child,
+  .capituloii p:last-child,
+  .capituloiii p:last-child,
+  .capitulov:last-child {
+    font-size: 0.6rem;
   }
 
   .legado .imgl .img-mobile {
@@ -464,10 +571,12 @@ footer img {
     background-color: #5e101a;
     border-radius: 0;
   }
+
   .legado h3 {
     font-size: 1rem;
     margin-bottom: 2vw;
   }
+
   .legado li {
     padding: 0;
     margin-bottom: 0;
@@ -480,6 +589,7 @@ footer img {
     gap: 0;
     min-width: 0;
   }
+
   .legado li:hover {
     box-shadow: 0 12px 26px #26050a45;
     transform: translateY(-4px);
@@ -511,7 +621,7 @@ footer img {
   }
 
   .legado ul li p {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     line-height: 1.8;
     letter-spacing: 0.2px;
   }
@@ -537,32 +647,39 @@ footer img {
   }
 
   .legado > p:last-child {
-    margin-top: 2vw;
+    display: none;
   }
+
   .oracao {
     text-align: center;
     margin: 0;
-    padding: 4vw 25vw;
+    padding: 4vw 28vw;
   }
+
   .oracao img {
     display: none;
   }
+
   .oracao h3 {
     font-size: 0.9rem;
     margin-bottom: 1vw;
-    font-family: 'Times New Roman', Times, serif
+    font-family: "Times New Roman", Times, serif;
   }
+
   .oracao p:last-child {
     font-size: 0.6rem;
     margin-bottom: 2vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
   }
+
   #frase-sjs {
     margin-top: 3vw;
   }
+
   footer {
     padding: 3vw 2vw;
   }
+
   footer p {
     margin-bottom: 2vw;
   }

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+Fontes Disponíveis:
+// Sugiro usar esta
+font-family: "Urbanist", sans-serif;
+font-family: "Fredoka", sans-serif;
+font-family: "Epilogue", sans-serif;
+font-family: "Nunito", sans-serif;
+font-family: "Oswald", sans-serif;
+*/
+
+header {
+  padding: 2vw 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.5rem;
+  font-family: "Nunito", sans-serif;
+  border-bottom: 1px solid #e4d6c7;
+  background-color: #fbf6ee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  width: 20px;
+  height: auto;
+}
+
+h1 {
+  color: #5e101a;
+  margin: 0;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav a {
+  display: inline-block;
+  padding: 8px 0;
+  color: #5e101a;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  padding: 4vw 2vw;
+  border-top: 1px solid #5e101a;
+  color: #5e101a;
+  background-color: #fbf6fb;
+}
+
+footer h3 {
+  font-weight: 600;
+  font-size: 0.5rem;
+  letter-spacing: 1.2px;
+  color: #5e101a;
+}
+
+footer p {
+  margin-bottom: 4vw;
+  font-size: 0.5rem;
+}
+
+footer img {
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (min-widht: 600px) {
+  header {
+    padding: 1.5vw 12vw;
+  }
+
+  header ul {
+    gap: 35px;
+  }
+
+  header a:hover {
+    transition: 0.5s ease;
+    color: #d89e32;
+    transform: translateY(-1px);
+  }
+
+  .logo img {
+    width: 45px;
+    margin-right: 10px;
+  }
+
+  footer {
+    padding: 3vw 2vw;
+  }
+
+  footer p {
+    margin-bottom: 2vw;
+  }
+}

@@ -177,8 +177,7 @@ summary {
 
 .capituloi p:last-child,
 .capituloii p:last-child,
-.capituloiii p:last-child,
-.capitulov p:last-child {
+.capituloiii p:last-child {
   font-size: 0.6rem;
   margin-top: 2vw;
 }
@@ -223,6 +222,11 @@ h3 {
   font-size: 0.7rem;
   line-height: 1.6;
   margin: 2vw 0;
+}
+
+.capitulov p {
+  font-size: 0.7rem;
+  line-height: 1.6;
 }
 
 q {
@@ -538,14 +542,13 @@ footer img {
   .capituloii p,
   .capituloiii p,
   .capituloiv p,
-  .capitulov {
+  .capitulov p {
     font-size: 0.7rem;
   }
 
   .capituloi p:last-child,
   .capituloii p:last-child,
-  .capituloiii p:last-child,
-  .capitulov:last-child {
+  .capituloiii p:last-child {
     font-size: 0.6rem;
   }
 

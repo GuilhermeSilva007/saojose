@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Urbanist:wght@400;500;600;700&display=swap");
 
-/* ===== CONFIGURAÇÕES ===== */
-
 .pagina-quiz {
   --vinho: #5e101a;
   --vinho-escuro: #3f0a11;
@@ -20,8 +18,6 @@
   margin: 0 auto;
   padding: 75px 0;
 }
-
-/* ===== APRESENTAÇÃO ===== */
 
 .quiz-intro {
   max-width: 720px;
@@ -51,8 +47,6 @@
   font-size: 1.05rem;
   line-height: 1.8;
 }
-
-/* ===== CARTÃO ===== */
 
 .quiz-card {
   padding: clamp(22px, 5vw, 48px);
@@ -107,8 +101,6 @@
   font-size: 0.65rem;
 }
 
-/* ===== CAMPO DO NOME ===== */
-
 .campo-nome {
   margin: 30px 0;
 }
@@ -134,8 +126,6 @@
 .campo-nome input:focus {
   border-color: var(--dourado);
 }
-
-/* ===== PROGRESSO ===== */
 
 .progresso-area {
   margin: 30px 0;
@@ -164,8 +154,6 @@
   background: var(--dourado);
   transition: width 0.35s ease;
 }
-
-/* ===== PERGUNTA INDIVIDUAL ===== */
 
 .pergunta-atual {
   min-height: 390px;
@@ -260,8 +248,6 @@
   color: white;
 }
 
-/* ===== BOTÕES ===== */
-
 .botao-finalizar,
 .botao-reiniciar {
   width: 100%;
@@ -283,8 +269,6 @@
   transform: translateY(-2px);
   background: var(--vinho-escuro);
 }
-
-/* ===== RESULTADO ===== */
 
 .resultado {
   padding: 35px 10px 10px;
@@ -337,8 +321,6 @@
   margin-right: 7px;
   font-size: 1.2rem;
 }
-
-/* ===== RANKING ===== */
 
 .ranking {
   margin-top: 65px;
@@ -411,8 +393,6 @@
   text-align: center;
 }
 
-/* ===== FRASE FINAL ===== */
-
 .quiz-frase {
   margin-top: 65px;
   text-align: center;
@@ -431,8 +411,6 @@
   color: #756963;
   font-size: 0.95rem;
 }
-
-/* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 600px) {
   .quiz-container {

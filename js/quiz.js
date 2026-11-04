@@ -24,7 +24,6 @@ let acertos = 0;
 let participante = "";
 let respondendo = false;
 
-// ===== PERGUNTAS =====
 
 const perguntas = [
   {
@@ -107,8 +106,6 @@ const perguntas = [
   },
 ];
 
-// ===== INICIAR =====
-
 botaoComecar.addEventListener("click", () => {
   const campoNome = document.getElementById("nome");
   participante = campoNome.value.trim();
@@ -127,8 +124,6 @@ botaoComecar.addEventListener("click", () => {
 
   mostrarPergunta();
 });
-
-// ===== MOSTRAR PERGUNTA =====
 
 function mostrarPergunta() {
   respondendo = false;
@@ -176,8 +171,6 @@ function mostrarPergunta() {
   });
 }
 
-// ===== SELECIONAR RESPOSTA =====
-
 function selecionarResposta(botao) {
   if (respondendo) return;
 
@@ -196,7 +189,6 @@ function selecionarResposta(botao) {
     acertos++;
   }
 
-  // Pequena pausa para destacar a alternativa escolhida.
   setTimeout(() => {
     indiceAtual++;
 
@@ -207,8 +199,6 @@ function selecionarResposta(botao) {
     }
   }, 650);
 }
-
-// ===== FINALIZAR =====
 
 function finalizarQuiz() {
   progressoBarra.style.width = "100%";
@@ -236,8 +226,6 @@ function finalizarQuiz() {
 
   salvarParticipante(participante, acertos);
 }
-
-// ===== RANKING COMPARTILHADO =====
 
 function obterRanking() {
   return new Promise((resolve, reject) => {
@@ -334,8 +322,6 @@ async function mostrarRanking() {
   }
 }
 
-// ===== REINICIAR =====
-
 botaoReiniciar.addEventListener("click", () => {
   indiceAtual = 0;
   acertos = 0;
@@ -358,7 +344,5 @@ botaoReiniciar.addEventListener("click", () => {
     block: "center",
   });
 });
-
-// ===== INICIALIZAÇÃO =====
 
 mostrarRanking();

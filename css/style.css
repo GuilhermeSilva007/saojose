@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Urbanist:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Urbanist:wght@400;500;600;700&display=swap");
 
-/* ==== BASE ==== */
+/* ===== BASE ===== */
 :root {
   --vinho: #5e101a;
   --vinho-escuro: #3f0a11;
@@ -9,12 +9,16 @@
   --rosado: #f4e9e4;
   --texto: #3a2f2c;
   --serifa: "Playfair Display", Georgia, serif;
-  --lateral: clamp(1.5rem, 8vw, 6rem);
+  --lateral: clamp(1.25rem, 6vw, 5rem);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -22,11 +26,12 @@ body {
   background: var(--creme);
   color: var(--texto);
   font-family: "Urbanist", sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -42,31 +47,28 @@ summary:focus-visible {
   outline-offset: 4px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--serifa);
-  color: var(--vinho);
-  line-height: 1.2;
+h1, h2, h3, h4 {
   margin: 0;
+  color: var(--vinho);
+  font-family: var(--serifa);
+  line-height: 1.2;
 }
 
 p {
   margin: 0 0 1rem;
 }
 
-/* ==== TÍTULOS PEQUENOS ==== */
 .mini-titulo,
 #mini-titulo {
-  margin: 0 0 0.6rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  margin-bottom: .65rem;
   color: var(--dourado);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
 }
 
-/* ==== CABEÇALHO ==== */
+/* ===== CABEÇALHO ===== */
 header {
   position: sticky;
   top: 0;
@@ -74,23 +76,22 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.8rem var(--lateral);
-  background: rgba(251, 246, 238, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #eadbd0;
+  gap: .8rem;
+  padding: .85rem var(--lateral);
+  border-bottom: 1px solid rgba(94, 16, 26, .12);
+  background: rgba(251, 246, 238, .94);
+  backdrop-filter: blur(12px);
 }
 
 .logo,
 .logo a {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: .65rem;
 }
 
 .logo img {
-  display: block;
-  width: 26px;
+  width: 34px;
 }
 
 h1 {
@@ -101,7 +102,7 @@ header ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.4rem 1.4rem;
+  gap: .35rem 1.15rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -109,74 +110,104 @@ header ul {
 
 header nav a {
   position: relative;
-  padding: 0.2rem 0;
-  font-size: 0.9rem;
-  font-weight: 600;
+  display: inline-block;
+  padding: .25rem 0;
   color: var(--vinho);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  transition: color .2s ease;
 }
 
 header nav a::after {
-  content: "";
   position: absolute;
+  right: 0;
+  bottom: 0;
   left: 0;
-  bottom: -2px;
-  width: 0;
   height: 2px;
   background: var(--dourado);
-  transition: width 0.3s ease;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
 }
 
-header nav a:hover::after {
-  width: 100%;
+header nav a:hover,
+header nav a.ativo {
+  color: #9b7026;
 }
 
-/* ==== BANNER ==== */
+header nav a:hover::after,
+header nav a.ativo::after {
+  transform: scaleX(1);
+}
+
+/* ===== BANNER ===== */
 .banner {
-  position: relative;
-  padding: 4rem var(--lateral);
-  background: linear-gradient(180deg, var(--creme), var(--rosado));
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3.5rem var(--lateral);
+  background: linear-gradient(135deg, var(--creme), var(--rosado));
 }
 
 .texto-banner {
-  max-width: 560px;
-  margin: 0 auto;
+  max-width: 590px;
 }
 
 .banner h2 {
-  font-size: clamp(2.1rem, 8vw, 3.4rem);
   margin-bottom: 1rem;
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  letter-spacing: -.03em;
 }
 
 .banner p {
-  font-size: 1.1rem;
+  max-width: 55ch;
+  font-size: 1.05rem;
 }
 
 .banner .texto-banner > a {
   display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.85rem 1.8rem;
-  background: var(--vinho);
-  color: var(--creme);
+  margin-top: .6rem;
+  padding: .8rem 1.6rem;
+  border: 1px solid var(--vinho);
   border-radius: 999px;
-  font-size: 0.85rem;
+  background: var(--vinho);
+  box-shadow: 0 8px 20px rgba(94, 16, 26, .16);
+  color: var(--creme);
+  font-size: .82rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  box-shadow: 0 6px 16px rgba(94, 16, 26, 0.25);
-  transition: transform 0.3s ease, background 0.3s ease;
+  letter-spacing: .06em;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
 .banner .texto-banner > a:hover {
+  transform: translateY(-3px);
   background: var(--vinho-escuro);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(94, 16, 26, .22);
 }
 
 .img-banner {
+  display: block;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.img-banner img {
+  width: 100%;
+  border: 1px solid var(--dourado);
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(94, 16, 26, .18);
+  object-fit: cover;
+}
+
+#texto-ia {
   display: none;
 }
 
-/* ==== CAPÍTULOS ==== */
+/* ===== CAPÍTULOS ===== */
 [class^="capitulo"] {
-  padding: 4rem max(var(--lateral), calc((100% - 700px) / 2));
+  padding: 3.5rem var(--lateral);
 }
 
 .capituloi,
@@ -190,35 +221,42 @@ header nav a:hover::after {
   background: var(--creme);
 }
 
+[class^="capitulo"] > *,
+.legado > * {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 [class^="capitulo"] h3 {
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
 }
 
 [class^="capitulo"] h3::after,
 .oracao h3::after {
-  content: "";
   display: block;
-  width: 56px;
+  width: 52px;
   height: 3px;
-  margin-top: 0.8rem;
+  margin-top: .8rem;
+  border-radius: 3px;
   background: var(--dourado);
-  border-radius: 2px;
+  content: "";
 }
 
-/* ==== BOTÃO SAIBA MAIS ==== */
+/* Detalhes / botão "Saiba mais" */
 summary {
   display: inline-block;
-  padding: 0.5rem 1.2rem;
-  border: 1.5px solid var(--dourado);
+  padding: .5rem 1.1rem;
+  border: 1px solid var(--dourado);
   border-radius: 999px;
   color: var(--vinho);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  list-style: none;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  list-style: none;
+  transition: background .2s ease, color .2s ease;
 }
 
 summary::-webkit-details-marker {
@@ -228,7 +266,7 @@ summary::-webkit-details-marker {
 summary:hover,
 details[open] > summary {
   background: var(--dourado);
-  color: #fff;
+  color: white;
 }
 
 details > p {
@@ -237,20 +275,20 @@ details > p {
   border-left: 3px solid var(--dourado);
 }
 
-/* ==== CARTA DE DESPEDIDA ==== */
+/* Citação */
 q {
   display: block;
-  margin: 1.5rem 0 0;
-  padding: 1.5rem 1.6rem;
-  background: #fff;
+  margin-top: 1.5rem;
+  padding: 1.3rem 1.5rem;
   border-left: 4px solid var(--vinho);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(58, 47, 44, 0.08);
-  font-family: var(--serifa);
-  font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(58, 47, 44, .07);
   color: var(--vinho);
+  font-family: var(--serifa);
+  font-size: 1.12rem;
+  font-style: italic;
+  line-height: 1.7;
 }
 
 q::before {
@@ -261,24 +299,24 @@ q::after {
   content: close-quote;
 }
 
-/* ==== LINHA DO TEMPO ==== */
+/* ===== LEGADO / LINHA DO TEMPO ===== */
 .legado {
   margin: 0;
-  padding: 4rem var(--lateral);
+  padding: 3.5rem var(--lateral);
   background: var(--vinho);
   color: #f1e6dc;
 }
 
 .legado h3 {
-  color: #fff8ed;
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
   margin-bottom: 2rem;
+  color: #fff8ed;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
 }
 
 .container-sant {
   display: grid;
   gap: 1rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -288,10 +326,11 @@ q::after {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.3rem 1.4rem;
+  overflow: hidden;
+  padding: 1.25rem;
+  border: 1px solid rgba(201, 151, 63, .45);
+  border-radius: 14px;
   background: var(--vinho-escuro);
-  border: 1px solid rgba(201, 151, 63, 0.35);
-  border-radius: 12px;
 }
 
 .txtl {
@@ -300,25 +339,25 @@ q::after {
 }
 
 .legado h4 {
-  margin-bottom: 0.4rem;
-  font-size: 1.5rem;
+  margin-bottom: .4rem;
   color: var(--dourado);
+  font-size: 1.35rem;
 }
 
 .legado li p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: .95rem;
   line-height: 1.6;
 }
 
 .imgl {
   flex-shrink: 0;
-  width: 30px;
+  width: 42px;
 }
 
 .imgl img {
-  display: block;
   width: 100%;
+  border-radius: 8px;
 }
 
 .legado .imgl .img-desktop {
@@ -326,188 +365,176 @@ q::after {
 }
 
 .legado > p:last-child {
-  margin: 2rem 0 0;
-  font-size: 0.95rem;
-  text-align: center;
+  margin: 2rem auto 0;
   color: #e4d3c4;
+  font-size: .9rem;
+  text-align: center;
 }
 
-/* ==== ORAÇÃO ==== */
+/* ===== ORAÇÃO ===== */
 .oracao {
   margin: 3rem 1.25rem;
-  padding: 3rem 1.6rem;
-  background: #fff;
+  padding: 2.5rem 1.4rem;
   border-top: 4px solid var(--dourado);
-  border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(58, 47, 44, 0.08);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 12px 32px rgba(58, 47, 44, .08);
   text-align: center;
 }
 
 .oracao h3 {
-  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.65rem;
   font-style: italic;
-  margin-bottom: 1.4rem;
 }
 
 .oracao h3::after {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .oracao img {
-  display: block;
-  width: 55%;
-  margin: 1.8rem auto;
-  border-radius: 8px;
-  outline: 1px solid var(--dourado);
-  outline-offset: 6px;
+  width: min(65%, 300px);
+  margin: 1.7rem auto;
+  border: 1px solid var(--dourado);
+  border-radius: 10px;
 }
 
 #frase-sjs {
-  margin: 1.5rem 0 0;
-  font-family: var(--serifa);
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  margin-top: 1.3rem;
   color: var(--vinho);
+  font-family: var(--serifa);
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-/* ==== RODAPÉ ==== */
+/* ===== RODAPÉ ===== */
 footer {
   padding: 2.5rem 1.5rem;
-  background: var(--vinho-escuro);
   border-top: 4px solid var(--dourado);
+  background: var(--vinho-escuro);
   color: #e9dccd;
   text-align: center;
 }
 
 footer h3 {
-  margin-bottom: 0.5rem;
-  font-family: "Urbanist", sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.15em;
+  margin-bottom: .5rem;
   color: #fff8ed;
+  font-family: "Urbanist", sans-serif;
+  font-size: .95rem;
+  letter-spacing: .12em;
 }
 
 footer p {
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-size: .85rem;
+  opacity: .85;
 }
 
 footer img {
   width: 56px;
+  margin: 0 auto;
 }
 
-/* ==== TELAS MAIORES ==== */
-@media screen and (min-width: 700px) {
+/* ===== TELAS MAIORES ===== */
+@media (min-width: 760px) {
   header {
     flex-direction: row;
     justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 76px;
   }
 
   header ul {
-    gap: 2rem;
+    gap: 1rem clamp(1rem, 2vw, 2rem);
   }
 
   header nav a {
-    font-size: 0.95rem;
+    font-size: .88rem;
   }
 
-  /* No computador, o texto aparece sem botão de expansão */
-  details > summary {
-    display: none;
-  }
-
-  details::details-content {
-    content-visibility: visible;
-  }
-
-  details > p {
-    display: block;
-    margin-top: 0;
-    padding-left: 0;
-    border-left: none;
-  }
-
-  /* Banner: conjunto centralizado */
   .banner {
-    display: flex;
+    min-height: 490px;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-    padding: 4.5rem var(--lateral) 5.5rem;
-    text-align: left;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
   }
 
   .texto-banner {
-    flex: 0 1 560px;
-    max-width: 560px;
-    margin: 0;
+    flex: 1;
   }
 
   .img-banner {
-    display: block;
     flex: 0 1 420px;
-    width: 100%;
-    max-width: 420px;
+    margin: 0;
   }
 
-  .img-banner img {
+  #texto-ia {
+    position: absolute;
+    bottom: 1.1rem;
+    left: 50%;
     display: block;
-    width: 100%;
-    border-radius: 10px;
-    outline: 1px solid var(--dourado);
-    outline-offset: 14px;
-    box-shadow: 0 20px 40px rgba(94, 16, 26, 0.22);
+    margin: 0;
+    padding: .25rem .9rem;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: var(--vinho);
+    color: var(--creme);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .08em;
   }
 
-  /* Capítulos */
   [class^="capitulo"],
   .legado {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
 
-  /* Linha do tempo */
+  details > summary {
+    display: none;
+  }
+
+  details > p {
+    display: block;
+    margin-top: 0;
+    padding-left: 0;
+    border-left: 0;
+  }
+
   .container-sant {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.8rem;
+    gap: 1.5rem;
     max-width: 1000px;
-    margin: 0 auto;
   }
 
   .legado h3,
   .legado > .mini-titulo,
   .legado > #mini-titulo {
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .legado h3 {
-    margin-bottom: 2.5rem;
   }
 
   .legado li {
     align-items: stretch;
     gap: 0;
     padding: 0;
-    overflow: hidden;
+    border-color: var(--dourado);
     background: var(--creme);
     color: var(--vinho);
-    border: 1px solid var(--dourado);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+    transition: transform .25s ease, box-shadow .25s ease;
   }
 
   .legado li:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .22);
   }
 
   .legado .txtl {
     align-self: center;
-    padding: 1.5rem;
+    padding: 1.4rem;
   }
 
   .legado h4 {
@@ -519,16 +546,16 @@ footer img {
   }
 
   .legado li:last-child {
-    grid-column: 1 / span 2;
+    grid-column: 1 / -1;
     justify-self: center;
-    width: 50%;
+    width: min(50%, 500px);
   }
 
-
   .imgl {
-    width: 40%;
+    width: 38%;
     max-width: 190px;
     border-left: 1px solid var(--dourado);
+    border-radius: 0;
     background: #e8d6b5;
   }
 
@@ -542,11 +569,11 @@ footer img {
 
   .legado .imgl img {
     height: 100%;
-    min-height: 220px;
+    min-height: 200px;
+    border-radius: 0;
     object-fit: cover;
   }
 
-  /* Oração */
   .oracao {
     max-width: 760px;
     margin: 4rem auto;
@@ -559,7 +586,21 @@ footer img {
 
   .oracao p:not(.mini-titulo):not(#frase-sjs) {
     font-family: var(--serifa);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
   }
 }

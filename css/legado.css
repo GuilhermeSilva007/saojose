@@ -146,7 +146,6 @@ header nav a.ativo::after {
   transform: scaleX(1);
 }
 
-
 .banner {
   display: flex;
   flex-direction: column;
@@ -214,7 +213,6 @@ header nav a.ativo::after {
   display: none;
 }
 
-
 [class^="capitulo"] {
   padding: 3.5rem var(--lateral);
 }
@@ -253,7 +251,6 @@ header nav a.ativo::after {
   content: "";
 }
 
-
 summary {
   display: inline-block;
   padding: 0.5rem 1.1rem;
@@ -288,7 +285,6 @@ details > p {
   border-left: 3px solid var(--dourado);
 }
 
-
 q {
   display: block;
   margin-top: 1.5rem;
@@ -314,7 +310,6 @@ q::before {
 q::after {
   content: close-quote;
 }
-
 
 .legado {
   margin: 0;
@@ -392,7 +387,6 @@ q::after {
   text-align: center;
 }
 
-
 .oracao {
   margin: 3rem 1.25rem;
   padding: 2.5rem 1.4rem;
@@ -434,11 +428,9 @@ q::after {
   font-weight: 700;
 }
 
-
 .pagina-legado {
   background: var(--creme);
 }
-
 
 .legado-hero {
   display: grid;
@@ -447,11 +439,7 @@ q::after {
 
   padding: 3rem var(--lateral);
 
-  background: linear-gradient(
-    120deg,
-    var(--vinho-escuro),
-    var(--vinho)
-  );
+  background: linear-gradient(120deg, var(--vinho-escuro), var(--vinho));
 }
 
 .legado-hero .mini-titulo {
@@ -483,7 +471,6 @@ q::after {
 
   object-fit: cover;
 }
-
 
 .legado-secao {
   display: grid;
@@ -518,7 +505,6 @@ q::after {
   letter-spacing: 0.13em;
 }
 
-
 .legado-reconhecimento {
   padding: 3.5rem var(--lateral);
 
@@ -539,9 +525,13 @@ q::after {
   margin: 2.5rem auto 0;
 }
 
+.legado-datas div:first-child {
+  border: none;
+}
+
 .legado-datas div {
   padding: 1.5rem;
-  border-top: 2px solid var(--dourado);
+  border-top: 1px solid var(--dourado);
 }
 
 .legado-datas span {
@@ -559,7 +549,6 @@ q::after {
 .legado-datas p {
   margin: 0;
 }
-
 
 .legado-devocao {
   padding: 3.5rem var(--lateral);
@@ -588,7 +577,6 @@ q::after {
   margin-bottom: 0.7rem;
   font-size: 1.3rem;
 }
-
 
 footer {
   padding: 2.5rem 1.5rem;
@@ -619,10 +607,7 @@ footer img {
   margin: 0 auto;
 }
 
-
 @media (min-width: 760px) {
-
-
   header {
     flex-direction: row;
     justify-content: space-between;
@@ -637,7 +622,6 @@ footer img {
   header nav a {
     font-size: 0.88rem;
   }
-
 
   .banner {
     min-height: 490px;
@@ -681,7 +665,6 @@ footer img {
     letter-spacing: 0.08em;
   }
 
-
   [class^="capitulo"],
   .legado {
     padding-top: 5rem;
@@ -698,7 +681,6 @@ footer img {
     padding-left: 0;
     border-left: 0;
   }
-
 
   .container-sant {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -769,7 +751,6 @@ footer img {
     object-fit: cover;
   }
 
-
   .oracao {
     max-width: 760px;
     margin: 4rem auto;
@@ -785,7 +766,6 @@ footer img {
     font-size: 1.1rem;
     line-height: 1.9;
   }
-
 
   .legado-hero {
     grid-template-columns: 1fr 0.8fr;

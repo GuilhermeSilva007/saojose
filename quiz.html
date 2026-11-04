@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teste seus conhecimentos sobre São José Sánchez del Río.">
+  <title>Quiz | São José Sánchez del Río</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/legado.css">
+  <link rel="stylesheet" href="css/quiz.css">
+
+  <script src="js/script.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+
+<body class="pagina-quiz">
+
+  <header>
+    <div class="logo">
+      <a href="index.html" aria-label="Página inicial">
+        <img src="img/cruz-patea.png" alt="Cruz">
+      </a>
+      <h1>Joselito</h1>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html#historia">História</a></li>
+        <li><a href="index.html#linha">Linha do Tempo</a></li>
+        <li><a href="index.html#oracao">Oração</a></li>
+        <li><a href="legado.html">Legado</a></li>
+        <li><a class="ativo" href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+
+    <section class="quiz-intro">
+      <span class="quiz-etiqueta">CONHECIMENTO E FÉ</span>
+      <h2>Você conhece a história de Joselito?</h2>
+      <p>
+        Descubra quanto você sabe sobre a vida, a coragem e o testemunho
+        de fé de São José Sánchez del Río. Responda às dez perguntas
+        e descubra sua pontuação!
+      </p>
+    </section>
+
+    <section class="quiz-card">
+
+      <div class="quiz-topo">
+        <div>
+          <span class="quiz-subtitulo">DESAFIO DE CONHECIMENTO</span>
+          <h3>Teste seus conhecimentos</h3>
+        </div>
+
+        <div class="quiz-total">
+          <strong>10</strong>
+          <span>perguntas</span>
+        </div>
+      </div>
+
+      <div id="inicioQuiz">
+        <div class="campo-nome">
+          <label for="nome">Nome do participante</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+            maxlength="40"
+            required
+          >
+        </div>
+
+        <button type="button" id="botaoComecar" class="botao-finalizar">
+          Começar desafio
+        </button>
+      </div>
+
+      <section id="areaPerguntas" hidden>
+
+        <div class="progresso-area">
+          <div class="progresso-texto">
+            <span id="numeroAtual">Pergunta 1 de 10</span>
+            <span id="progressoTexto">0% concluído</span>
+          </div>
+
+          <div class="progresso-fundo">
+            <div id="progressoBarra"></div>
+          </div>
+        </div>
+
+        <form id="quizForm">
+          <div id="perguntaAtual"></div>
+        </form>
+
+      </section>
+
+      <section class="resultado" id="resultado" hidden>
+        <span class="quiz-etiqueta">DESAFIO CONCLUÍDO</span>
+        <h3>Parabéns por participar!</h3>
+
+        <div class="pontuacao-circulo">
+          <strong id="pontuacao">0/10</strong>
+          <span>acertos</span>
+        </div>
+
+        <p id="mensagemResultado"></p>
+
+        <button type="button" id="botaoReiniciar" class="botao-reiniciar">
+          <span>↻</span> Refazer o quiz
+        </button>
+      </section>
+
+    </section>
+
+    <!-- O RANKING PERMANECE ABAIXO DO QUIZ -->
+
+    <section class="ranking">
+      <div class="ranking-titulo">
+        <span class="quiz-etiqueta">PARTICIPANTES</span>
+        <h3>Ranking de conhecimento</h3>
+        <p>Confira os resultados dos participantes que já completaram o desafio.</p>
+      </div>
+
+      <div id="listaRanking" class="lista-ranking">
+        <p class="ranking-vazio">Seja o primeiro a participar do quiz!</p>
+      </div>
+    </section>
+
+    <section class="quiz-frase">
+      <p>“Viva Cristo Rei!”</p>
+      <span>Que o exemplo de fé e coragem de Joselito inspire sua caminhada.</span>
+    </section>
+
+  </main>
+
+  <footer>
+    <h3>PARÓQUIA NOSSA SENHORA DE BÉLEM</h3>
+    <p>© 2026 Todos os direitos reservados.</p>
+    <img src="img/brasao.png" alt="Brasão da arquidiocese">
+  </footer>
+
+</body>
+</html>

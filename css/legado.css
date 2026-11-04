@@ -146,7 +146,6 @@ header nav a.ativo::after {
   transform: scaleX(1);
 }
 
-/* ===== BANNER DA PÁGINA INICIAL ===== */
 
 .banner {
   display: flex;
@@ -215,7 +214,6 @@ header nav a.ativo::after {
   display: none;
 }
 
-/* ===== CAPÍTULOS DA PÁGINA INICIAL ===== */
 
 [class^="capitulo"] {
   padding: 3.5rem var(--lateral);
@@ -255,7 +253,6 @@ header nav a.ativo::after {
   content: "";
 }
 
-/* ===== DETALHES ===== */
 
 summary {
   display: inline-block;
@@ -291,7 +288,6 @@ details > p {
   border-left: 3px solid var(--dourado);
 }
 
-/* ===== CITAÇÃO ===== */
 
 q {
   display: block;
@@ -319,7 +315,6 @@ q::after {
   content: close-quote;
 }
 
-/* ===== LEGADO DA PÁGINA INICIAL ===== */
 
 .legado {
   margin: 0;
@@ -397,7 +392,6 @@ q::after {
   text-align: center;
 }
 
-/* ===== ORAÇÃO DA PÁGINA INICIAL ===== */
 
 .oracao {
   margin: 3rem 1.25rem;
@@ -440,13 +434,11 @@ q::after {
   font-weight: 700;
 }
 
-/* ===== PÁGINA LEGADO ===== */
 
 .pagina-legado {
   background: var(--creme);
 }
 
-/* BANNER PRINCIPAL */
 
 .legado-hero {
   display: grid;
@@ -492,7 +484,6 @@ q::after {
   object-fit: cover;
 }
 
-/* SEÇÕES COM IMAGENS */
 
 .legado-secao {
   display: grid;
@@ -527,7 +518,6 @@ q::after {
   letter-spacing: 0.13em;
 }
 
-/* RECONHECIMENTO DA IGREJA */
 
 .legado-reconhecimento {
   padding: 3.5rem var(--lateral);
@@ -570,7 +560,6 @@ q::after {
   margin: 0;
 }
 
-/* DEVOÇÃO */
 
 .legado-devocao {
   padding: 3.5rem var(--lateral);
@@ -600,7 +589,6 @@ q::after {
   font-size: 1.3rem;
 }
 
-/* ===== RODAPÉ ===== */
 
 footer {
   padding: 2.5rem 1.5rem;
@@ -631,11 +619,9 @@ footer img {
   margin: 0 auto;
 }
 
-/* ===== TELAS MAIORES ===== */
 
 @media (min-width: 760px) {
 
-  /* CABEÇALHO */
 
   header {
     flex-direction: row;
@@ -652,7 +638,6 @@ footer img {
     font-size: 0.88rem;
   }
 
-  /* BANNER INICIAL */
 
   .banner {
     min-height: 490px;
@@ -696,7 +681,6 @@ footer img {
     letter-spacing: 0.08em;
   }
 
-  /* CAPÍTULOS */
 
   [class^="capitulo"],
   .legado {
@@ -715,7 +699,6 @@ footer img {
     border-left: 0;
   }
 
-  /* LEGADO DA PÁGINA INICIAL */
 
   .container-sant {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -786,7 +769,6 @@ footer img {
     object-fit: cover;
   }
 
-  /* ORAÇÃO INICIAL */
 
   .oracao {
     max-width: 760px;
@@ -804,7 +786,6 @@ footer img {
     line-height: 1.9;
   }
 
-  /* PÁGINA LEGADO */
 
   .legado-hero {
     grid-template-columns: 1fr 0.8fr;
@@ -845,8 +826,6 @@ footer img {
   }
 }
 
-/* ===== ACESSIBILIDADE ===== */
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -860,4 +839,3 @@ footer img {
     animation-duration: 0.01ms !important;
   }
 }
-```

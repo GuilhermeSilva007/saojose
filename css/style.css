@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Urbanist:wght@400;500;600;700&display=swap");
 
-/* ===== BASE ===== */
 :root {
   --vinho: #5e101a;
   --vinho-escuro: #3f0a11;
@@ -68,7 +67,6 @@ p {
   text-transform: uppercase;
 }
 
-/* ===== CABEÇALHO ===== */
 header {
   position: sticky;
   top: 0;
@@ -142,7 +140,6 @@ header nav a.ativo::after {
   transform: scaleX(1);
 }
 
-/* ===== BANNER ===== */
 .banner {
   display: flex;
   flex-direction: column;
@@ -189,6 +186,7 @@ header nav a.ativo::after {
 
 .img-banner {
   display: block;
+  display: none;
   max-width: 440px;
   margin: 0 auto;
 }
@@ -467,6 +465,7 @@ footer img {
   }
 
   .img-banner {
+    display: flex;
     flex: 0 1 420px;
     margin: 0;
   }
